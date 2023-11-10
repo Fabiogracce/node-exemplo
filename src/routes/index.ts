@@ -8,17 +8,48 @@ const router = Router()
 
 // criando a primeira rota
 router.get("/",(req,res)=>{
-    res.send("Ola Mundo")
+
+    /*let user = {
+
+        name:" jose",
+        age: 46
+
+    }
+    */
+        let idade: number = 18
+        let mostrarIdade: boolean = false
+        
+        if (idade >= 18){
+            mostrarIdade =  true
+        }
+        
+
+
+
+    //let user: string = "fabio"
+    res.render('home',{
+      //  user
+        name:'Joao',
+        lastname:'Silva',
+        mostrarIdade  
+            
+      
+
+        
+
+        
+        
+    })
 })
 
 router.get('/contatos',(req:Request,res:Response)=>{
-    res.send("Esta é a pagina de contato")
+    res.render("contato")
 })
 
 //rota estatica
 
-router.get('/noticias/titulo-da-noticia',(req:Request,res:Response)=>{
-    res.send("Noticia aparcendo na tela")
+router.get('/sobre',(req:Request,res:Response)=>{
+    res.render("sobre")
 })
 
 //rota dinamica
