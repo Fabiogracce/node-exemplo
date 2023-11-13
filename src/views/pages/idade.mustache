@@ -1,0 +1,19 @@
+{{>partials/header}}
+
+<h3> Qual ano você nasceu?</h3>
+
+<form method="POST">
+
+    <input type="text" name="idade" placeholder="Qual ano você nasceu"/><br>
+    <input type="submit" value="Enviar" />
+
+</form>   
+
+{{#idade}}
+
+Oi, você tem  {{idade}} anos!!!
+
+{{/idade}}
+
+
+{{>partials/footer}}   
